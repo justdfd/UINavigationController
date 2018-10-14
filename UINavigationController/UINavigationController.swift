@@ -24,7 +24,6 @@ class NavigationController:UINavigationController {
         titleViewHeightConstraint.isActive = true
         titleView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         titleView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        //titleView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         titleView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.3).isActive = true
     }
     required init?(coder aDecoder: NSCoder) {
@@ -38,7 +37,6 @@ class NavigationController:UINavigationController {
         pushViewController(greenVC, animated: true)
     }
     func changeTitleViewHeight(to:CGFloat) {
-        print(view.safeAreaInsets.top)
         titleViewHeightConstraint.constant = to - view.safeAreaInsets.top
     }
 }
